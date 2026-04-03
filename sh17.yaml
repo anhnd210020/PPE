@@ -1,0 +1,22 @@
+names:
+- person
+- ear
+- ear-mufs
+- face
+- face-guard
+- face-mask-medical
+- foot
+- tools
+- glasses
+- gloves
+- helmet
+- hands
+- head
+- medical-suit
+- shoes
+- safety-suit
+- safety-vest
+nc: 17
+path: /home/ducanh/PPE/data_ultralytics
+train: images/train
+val: images/val

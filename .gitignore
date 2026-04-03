@@ -1,0 +1,31 @@
+# Dataset
+sh17dataset/
+data_ultralytics/
+data_coco/
+
+# Model weights & training runs
+runs/
+evaluation/
+dataset_analysis/
+*.pt
+*.pth
+*.onnx
+
+# Logs
+*.log
+yl11_log.txt
+yl11_output.txt
+
+# Python
+__pycache__/
+*.py[cod]
+
+# OS & IDE
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Images
+*.png
+*.jpg
