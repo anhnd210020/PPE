@@ -87,9 +87,9 @@ def eval_ultralytics(name, weights, model_type):
 
     metrics = model.val(
         data=DATASET_YAML,
-        imgsz=1280,
-        batch=8,
-        device="0",
+        imgsz=640,
+        batch=128,
+        device="1",
         plots=True,
         save_json=True,
     )

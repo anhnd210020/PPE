@@ -1,0 +1,9 @@
+nohup: ignoring input
+
+=======================================================
+  DINO (r50) — FULL
+=======================================================
+  ERROR: No module named 'mmcv'
+  Install with:
+    pip install -U openmim
+    mim install mmengine mmcv mmdet
