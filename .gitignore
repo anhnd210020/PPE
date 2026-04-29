@@ -1,31 +1,41 @@
-# Dataset
-sh17dataset/
-data_ultralytics/
-data_coco/
-
-# Model weights & training runs
-runs/
-evaluation/
-dataset_analysis/
-*.pt
-*.pth
-*.onnx
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.ipynb_checkpoints/
 
 # Logs
 *.log
+*_log.txt
+*_output.txt
 yl11_log.txt
 yl11_output.txt
+dino_log.txt
+yolo9e_log.txt
+yolov9e_log.txt
+train_rtdetrv2_full.log
 
-# Python
-__pycache__/
-*.py[cod]
+# Model weights (đẩy lên HuggingFace thay vì GitHub)
+*.pt
+*.pth
+*.onnx
+*.engine
 
-# OS & IDE
+# Training outputs
+runs/
+
+# Datasets (quá lớn cho git)
+sh17dataset/
+data_coco/
+data_ultralytics/
+
+# Junk files
+=*
 .DS_Store
-.vscode/
-.idea/
-*.swp
+*.tmp
 
-# Images
-*.png
-*.jpg
+# Virtual envs
+venv/
+env/
+.venv/

@@ -1,0 +1,47 @@
+[
+  {
+    "model": "rtdetrv2_full2",
+    "mAP50": 65.12,
+    "mAP50_95": 37.19,
+    "precision": 74.89,
+    "recall": 62.47,
+    "per_class_ap50": {
+      "person": 87.95,
+      "ear": 81.3,
+      "ear-mufs": 55.28,
+      "face": 91.32,
+      "face-guard": 57.04,
+      "face-mask-medical": 72.97,
+      "foot": 24.62,
+      "tools": 42.15,
+      "glasses": 76.26,
+      "gloves": 59.87,
+      "helmet": 71.29,
+      "hands": 85.99,
+      "head": 88.17,
+      "medical-suit": 54.52,
+      "shoes": 61.49,
+      "safety-suit": 48.85,
+      "safety-vest": 47.92
+    },
+    "per_class_ap50_95": {
+      "person": 58.99,
+      "ear": 45.51,
+      "ear-mufs": 29.47,
+      "face": 58.26,
+      "face-guard": 23.42,
+      "face-mask-medical": 37.99,
+      "foot": 9.92,
+      "tools": 20.56,
+      "glasses": 39.27,
+      "gloves": 30.71,
+      "helmet": 49.07,
+      "hands": 50.39,
+      "head": 58.06,
+      "medical-suit": 33.0,
+      "shoes": 30.33,
+      "safety-suit": 28.62,
+      "safety-vest": 28.58
+    }
+  }
+]

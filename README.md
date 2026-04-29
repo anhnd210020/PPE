@@ -12,6 +12,10 @@ Object detection for Personal Protective Equipment (PPE) compliance in manufactu
 | Image resolution | 2240×1808 to 8192×8192 (most common 4000×6000) |
 | Class imbalance | 118× (hands: 15,850 vs face-guard: 134) |
 
+Source: [SH17 Dataset](https://github.com/ahmadmughees/sh17dataset) by Ahmad Mughees et al.
+Paper: [SH17: A Dataset for Human Safety and Personal Protective Equipment Detection](https://arxiv.org/abs/2407.04590)
+
+
 ### Classes
 
 | ID | Class | Instances | Group |
@@ -43,6 +47,34 @@ Three architectures benchmarked against the YOLOv9-e baseline (70.9 mAP@50 from 
 | **YOLO11x** | CNN (Ultralytics) | Fast iteration, strong augmentation pipeline, SOTA in YOLO family |
 | **RT-DETRv2-X** | Hybrid CNN-Transformer | End-to-end (no NMS), good at capturing global context between body parts and PPE |
 | **DINO** | Transformer (mmdetection) | Deformable attention + contrastive denoising, strong on small objects |
+
+## Results
+
+| Model | mAP@50 | mAP@50-95 | Params (M) | Notes |
+|-------|-------:|----------:|-----------:|-------|
+| YOLOv9-e (paper baseline) | 70.9 | - | 58 | Reference from original SH17 paper |
+| YOLOv9-e (ours) | 69.1 | 47.3 | 57.4 | |
+| YOLO11x | 64.8 | 41,7 | 56.8 | |
+| RT-DETRv2-X | 65.1 | 37.2 | 65.5 | |
+
+See `evaluation/comparison.csv` for per-class AP and full comparison.
+
+![Model Comparison](evaluation/model_comparison.png)
+## Pretrained Weights
+
+Trained model checkpoints are available on HuggingFace:
+[anhnd210020/PPE-detection](https://huggingface.co/anhnd210020/PPE-detection)
+
+```python
+from huggingface_hub import hf_hub_download
+from ultralytics import YOLO
+
+# Download best YOLO11x weights
+weights_path = hf_hub_download(repo_id="anhnd210020/PPE-detection", 
+                                filename="weights/yolo11x_best.pt")
+model = YOLO(weights_path)
+results = model("path/to/image.jpg")
+```
 
 ## Project Structure
 
